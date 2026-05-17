@@ -1,0 +1,1530 @@
+{
+  "logistics": [
+    {
+      "product_type": "Extra Small \n（超级轻小件）",
+      "channel": "CEL Express Extra Small     超级轻小件（陆空特快）",
+      "delivery_time": "5-10天",
+      "rule": "0.0468元/克+3.12元/票",
+      "min_weight_kg": 0.001,
+      "max_weight_kg": 0.5,
+      "min_price_rub": 1.0,
+      "max_price_rub": 1500.0,
+      "price_per_gram": 0.0468,
+      "ticket_fee": 3.12
+    },
+    {
+      "product_type": "Extra Small \n（超级轻小件）",
+      "channel": "CEL Standard Extra Small    超级轻小件（陆空标准）",
+      "delivery_time": "10-15天",
+      "rule": "0.0364元/克+3.12元/票",
+      "min_weight_kg": 0.001,
+      "max_weight_kg": 0.5,
+      "min_price_rub": 1.0,
+      "max_price_rub": 1500.0,
+      "price_per_gram": 0.0364,
+      "ticket_fee": 3.12
+    },
+    {
+      "product_type": "Extra Small \n（超级轻小件）",
+      "channel": "CEL Economy Extra Small     超级轻小件（陆运经济）",
+      "delivery_time": "15-25天",
+      "rule": "0.026元/克+3.12元/票",
+      "min_weight_kg": 0.001,
+      "max_weight_kg": 0.5,
+      "min_price_rub": 1.0,
+      "max_price_rub": 1500.0,
+      "price_per_gram": 0.026,
+      "ticket_fee": 3.12
+    },
+    {
+      "product_type": "Budget       \n（低客单价标准件）",
+      "channel": "CEL Express Budget           低客单价标准件（陆空特快）",
+      "delivery_time": "5-10天",
+      "rule": "0.03432元/克+23.92元/票",
+      "min_weight_kg": 0.501,
+      "max_weight_kg": 30.0,
+      "min_price_rub": 1.0,
+      "max_price_rub": 1500.0,
+      "price_per_gram": 0.03432,
+      "ticket_fee": 23.92
+    },
+    {
+      "product_type": "Budget       \n（低客单价标准件）",
+      "channel": "CEL Standard Budget         低客单价标准件（陆空标准）",
+      "delivery_time": "10-15天",
+      "rule": "0.026元/克+23.92元/票",
+      "min_weight_kg": 0.501,
+      "max_weight_kg": 30.0,
+      "min_price_rub": 1.0,
+      "max_price_rub": 1500.0,
+      "price_per_gram": 0.026,
+      "ticket_fee": 23.92
+    },
+    {
+      "product_type": "Budget       \n（低客单价标准件）",
+      "channel": "CEL Economy Budget          低客单价标准件（陆运经济）",
+      "delivery_time": "15-25天",
+      "rule": "0.01768元/克+23.92元/票",
+      "min_weight_kg": 0.501,
+      "max_weight_kg": 30.0,
+      "min_price_rub": 1.0,
+      "max_price_rub": 1500.0,
+      "price_per_gram": 0.01768,
+      "ticket_fee": 23.92
+    },
+    {
+      "product_type": "Small              \n（小件）",
+      "channel": "CEL Express Small           小件（陆空特快）",
+      "delivery_time": "5-10天",
+      "rule": "0.0468元/克+16.64元/票",
+      "min_weight_kg": 0.001,
+      "max_weight_kg": 2.0,
+      "min_price_rub": 1501.0,
+      "max_price_rub": 7000.0,
+      "price_per_gram": 0.0468,
+      "ticket_fee": 16.64
+    },
+    {
+      "product_type": "Small              \n（小件）",
+      "channel": "CEL Standard Small          小件（陆空标准）",
+      "delivery_time": "10-15天",
+      "rule": "0.0364元/克+16.64元/票",
+      "min_weight_kg": 0.001,
+      "max_weight_kg": 2.0,
+      "min_price_rub": 1501.0,
+      "max_price_rub": 7000.0,
+      "price_per_gram": 0.0364,
+      "ticket_fee": 16.64
+    },
+    {
+      "product_type": "Small              \n（小件）",
+      "channel": "CEL Economy Small           小件（陆运经济）",
+      "delivery_time": "15-25天",
+      "rule": "0.026元/克+16.64元/票",
+      "min_weight_kg": 0.001,
+      "max_weight_kg": 2.0,
+      "min_price_rub": 1501.0,
+      "max_price_rub": 7000.0,
+      "price_per_gram": 0.026,
+      "ticket_fee": 16.64
+    },
+    {
+      "product_type": "Big                     \n（大件）",
+      "channel": "CEL Standard Big            大件（陆空标准）",
+      "delivery_time": "10-15天",
+      "rule": "0.026元/克+37.44元/票",
+      "min_weight_kg": 2.001,
+      "max_weight_kg": 30.0,
+      "min_price_rub": 1501.0,
+      "max_price_rub": 7000.0,
+      "price_per_gram": 0.026,
+      "ticket_fee": 37.44
+    },
+    {
+      "product_type": "Big                     \n（大件）",
+      "channel": "CEL Economy Big             大件（陆运经济）",
+      "delivery_time": "15-25天",
+      "rule": "0.01768元/克+37.44元/票",
+      "min_weight_kg": 2.001,
+      "max_weight_kg": 30.0,
+      "min_price_rub": 1501.0,
+      "max_price_rub": 7000.0,
+      "price_per_gram": 0.01768,
+      "ticket_fee": 37.44
+    },
+    {
+      "product_type": "Premium Small\n（高客单价小件）",
+      "channel": "CEL Express Premium Small   高客单价小件（陆空特快）",
+      "delivery_time": "5-10天",
+      "rule": "0.0468元/克+22.88元/票",
+      "min_weight_kg": 0.001,
+      "max_weight_kg": 5.0,
+      "min_price_rub": 7001.0,
+      "max_price_rub": 250000.0,
+      "price_per_gram": 0.0468,
+      "ticket_fee": 22.88
+    },
+    {
+      "product_type": "Premium Small\n（高客单价小件）",
+      "channel": "CEL Standard Premium Small    高客单价小件（陆空标准）",
+      "delivery_time": "10-15天",
+      "rule": "0.0364元/克+22.88元/票",
+      "min_weight_kg": 0.001,
+      "max_weight_kg": 5.0,
+      "min_price_rub": 7001.0,
+      "max_price_rub": 250000.0,
+      "price_per_gram": 0.0364,
+      "ticket_fee": 22.88
+    },
+    {
+      "product_type": "Premium Small\n（高客单价小件）",
+      "channel": "CEL Economy Premium Small   高客单价小件（陆运经济）",
+      "delivery_time": "15-25天",
+      "rule": "0.026元/克+22.88元/票",
+      "min_weight_kg": 0.001,
+      "max_weight_kg": 5.0,
+      "min_price_rub": 7001.0,
+      "max_price_rub": 250000.0,
+      "price_per_gram": 0.026,
+      "ticket_fee": 22.88
+    },
+    {
+      "product_type": "Premium Big    \n（高客单价大件）",
+      "channel": "CEL Standard Premium Big    高客单价大件（陆空标准）",
+      "delivery_time": "10-15天",
+      "rule": "0.02912元/克+64.48元/票",
+      "min_weight_kg": 5.001,
+      "max_weight_kg": 30.0,
+      "min_price_rub": 7001.0,
+      "max_price_rub": 250000.0,
+      "price_per_gram": 0.02912,
+      "ticket_fee": 64.48
+    },
+    {
+      "product_type": "Premium Big    \n（高客单价大件）",
+      "channel": "CEL Economy Premium Big     高客单价大件（陆运经济）",
+      "delivery_time": "15-25天",
+      "rule": "0.02392元/克+64.48元/票",
+      "min_weight_kg": 5.001,
+      "max_weight_kg": 30.0,
+      "min_price_rub": 7001.0,
+      "max_price_rub": 250000.0,
+      "price_per_gram": 0.02392,
+      "ticket_fee": 64.48
+    }
+  ],
+  "commissions": [
+    {
+      "module": "药房商品",
+      "category": "药店",
+      "le1500_rfbs": 12.0,
+      "le1500_fbp": 11.0,
+      "le5000_rfbs": 14.0,
+      "le5000_fbp": 13.0,
+      "gt5000_rfbs": 18.0,
+      "gt5000_fbp": 17.0
+    },
+    {
+      "module": "药房商品",
+      "category": "矫形用品",
+      "le1500_rfbs": 12.0,
+      "le1500_fbp": 11.0,
+      "le5000_rfbs": 17.0,
+      "le5000_fbp": 16.0,
+      "gt5000_rfbs": 17.0,
+      "gt5000_fbp": 16.0
+    },
+    {
+      "module": "药房商品",
+      "category": "成人用品",
+      "le1500_rfbs": 12.0,
+      "le1500_fbp": 11.0,
+      "le5000_rfbs": 14.0,
+      "le5000_fbp": 13.0,
+      "gt5000_rfbs": 21.0,
+      "gt5000_fbp": 20.0
+    },
+    {
+      "module": "药房商品",
+      "category": "辅助药品",
+      "le1500_rfbs": 12.0,
+      "le1500_fbp": 11.0,
+      "le5000_rfbs": 15.0,
+      "le5000_fbp": 14.0,
+      "gt5000_rfbs": 15.0,
+      "gt5000_fbp": 14.0
+    },
+    {
+      "module": "药房商品",
+      "category": "电子烟及加热系统配件",
+      "le1500_rfbs": 12.0,
+      "le1500_fbp": 11.0,
+      "le5000_rfbs": 24.0,
+      "le5000_fbp": 23.0,
+      "gt5000_rfbs": 24.0,
+      "gt5000_fbp": 23.0
+    },
+    {
+      "module": "药房商品",
+      "category": "维生素和膳食补充剂",
+      "le1500_rfbs": 12.0,
+      "le1500_fbp": 11.0,
+      "le5000_rfbs": 18.0,
+      "le5000_fbp": 17.0,
+      "gt5000_rfbs": 18.0,
+      "gt5000_fbp": 17.0
+    },
+    {
+      "module": "家居与汽车用品",
+      "category": "装饰、清洁与储物",
+      "le1500_rfbs": 12.0,
+      "le1500_fbp": 11.0,
+      "le5000_rfbs": 14.0,
+      "le5000_fbp": 13.0,
+      "gt5000_rfbs": 18.0,
+      "gt5000_fbp": 17.0
+    },
+    {
+      "module": "家居与汽车用品",
+      "category": "住宅和花园",
+      "le1500_rfbs": 12.0,
+      "le1500_fbp": 11.0,
+      "le5000_rfbs": 14.0,
+      "le5000_fbp": 13.0,
+      "gt5000_rfbs": 20.0,
+      "gt5000_fbp": 19.0
+    },
+    {
+      "module": "家居与汽车用品",
+      "category": "汽车用品",
+      "le1500_rfbs": 12.0,
+      "le1500_fbp": 11.0,
+      "le5000_rfbs": 17.0,
+      "le5000_fbp": 16.0,
+      "gt5000_rfbs": 17.0,
+      "gt5000_fbp": 16.0
+    },
+    {
+      "module": "家居与汽车用品",
+      "category": "手动工具和测量仪器",
+      "le1500_rfbs": 12.0,
+      "le1500_fbp": 11.0,
+      "le5000_rfbs": 17.0,
+      "le5000_fbp": 16.0,
+      "gt5000_rfbs": 17.0,
+      "gt5000_fbp": 16.0
+    },
+    {
+      "module": "家居与汽车用品",
+      "category": "建筑和装修",
+      "le1500_rfbs": 12.0,
+      "le1500_fbp": 11.0,
+      "le5000_rfbs": 18.0,
+      "le5000_fbp": 17.0,
+      "gt5000_rfbs": 18.0,
+      "gt5000_fbp": 17.0
+    },
+    {
+      "module": "家居与汽车用品",
+      "category": "康复设备",
+      "le1500_rfbs": 12.0,
+      "le1500_fbp": 11.0,
+      "le5000_rfbs": 14.0,
+      "le5000_fbp": 13.0,
+      "gt5000_rfbs": 17.0,
+      "gt5000_fbp": 16.0
+    },
+    {
+      "module": "家居与汽车用品",
+      "category": "重型建筑",
+      "le1500_rfbs": 11.0,
+      "le1500_fbp": 10.0,
+      "le5000_rfbs": 11.0,
+      "le5000_fbp": 10.0,
+      "gt5000_rfbs": 11.0,
+      "gt5000_fbp": 10.0
+    },
+    {
+      "module": "家居与汽车用品",
+      "category": "儿童餐具",
+      "le1500_rfbs": 12.0,
+      "le1500_fbp": 11.0,
+      "le5000_rfbs": 14.0,
+      "le5000_fbp": 13.0,
+      "gt5000_rfbs": 18.0,
+      "gt5000_fbp": 17.0
+    },
+    {
+      "module": "家居与汽车用品",
+      "category": "家具",
+      "le1500_rfbs": 10.0,
+      "le1500_fbp": 9.0,
+      "le5000_rfbs": 10.0,
+      "le5000_fbp": 9.0,
+      "gt5000_rfbs": 10.0,
+      "gt5000_fbp": 9.0
+    },
+    {
+      "module": "家居与汽车用品",
+      "category": "轮胎",
+      "le1500_rfbs": 10.0,
+      "le1500_fbp": 9.0,
+      "le5000_rfbs": 10.0,
+      "le5000_fbp": 9.0,
+      "gt5000_rfbs": 10.0,
+      "gt5000_fbp": 9.0
+    },
+    {
+      "module": "家居与汽车用品",
+      "category": "装饰材料",
+      "le1500_rfbs": 12.0,
+      "le1500_fbp": 11.0,
+      "le5000_rfbs": 14.0,
+      "le5000_fbp": 13.0,
+      "gt5000_rfbs": 14.0,
+      "gt5000_fbp": 13.0
+    },
+    {
+      "module": "家居与汽车用品",
+      "category": "卫浴设备",
+      "le1500_rfbs": 12.0,
+      "le1500_fbp": 11.0,
+      "le5000_rfbs": 14.0,
+      "le5000_fbp": 13.0,
+      "gt5000_rfbs": 14.0,
+      "gt5000_fbp": 13.0
+    },
+    {
+      "module": "家居与汽车用品",
+      "category": "日化",
+      "le1500_rfbs": 12.0,
+      "le1500_fbp": 11.0,
+      "le5000_rfbs": 18.0,
+      "le5000_fbp": 17.0,
+      "gt5000_rfbs": 18.0,
+      "gt5000_fbp": 17.0
+    },
+    {
+      "module": "家居与汽车用品",
+      "category": "建筑、装修和园艺设备",
+      "le1500_rfbs": 12.0,
+      "le1500_fbp": 11.0,
+      "le5000_rfbs": 16.0,
+      "le5000_fbp": 15.0,
+      "gt5000_rfbs": 16.0,
+      "gt5000_fbp": 15.0
+    },
+    {
+      "module": "家居与汽车用品",
+      "category": "新年装饰用品",
+      "le1500_rfbs": 12.0,
+      "le1500_fbp": 11.0,
+      "le5000_rfbs": 14.0,
+      "le5000_fbp": 13.0,
+      "gt5000_rfbs": 20.0,
+      "gt5000_fbp": 19.0
+    },
+    {
+      "module": "家居与汽车用品",
+      "category": "电动滑板车",
+      "le1500_rfbs": 12.0,
+      "le1500_fbp": 11.0,
+      "le5000_rfbs": 17.0,
+      "le5000_fbp": 16.0,
+      "gt5000_rfbs": 17.0,
+      "gt5000_fbp": 16.0
+    },
+    {
+      "module": "家居与汽车用品",
+      "category": "船只、马达和充气艇",
+      "le1500_rfbs": 12.0,
+      "le1500_fbp": 11.0,
+      "le5000_rfbs": 15.0,
+      "le5000_fbp": 14.0,
+      "gt5000_rfbs": 15.0,
+      "gt5000_fbp": 14.0
+    },
+    {
+      "module": "家居与汽车用品",
+      "category": "自行车",
+      "le1500_rfbs": 12.0,
+      "le1500_fbp": 11.0,
+      "le5000_rfbs": 15.0,
+      "le5000_fbp": 14.0,
+      "gt5000_rfbs": 15.0,
+      "gt5000_fbp": 14.0
+    },
+    {
+      "module": "家居与汽车用品",
+      "category": "水过滤器",
+      "le1500_rfbs": 12.0,
+      "le1500_fbp": 11.0,
+      "le5000_rfbs": 17.0,
+      "le5000_fbp": 16.0,
+      "gt5000_rfbs": 17.0,
+      "gt5000_fbp": 16.0
+    },
+    {
+      "module": "家居与汽车用品",
+      "category": "运动手表",
+      "le1500_rfbs": 12.0,
+      "le1500_fbp": 11.0,
+      "le5000_rfbs": 12.0,
+      "le5000_fbp": 11.0,
+      "gt5000_rfbs": 12.0,
+      "gt5000_fbp": 11.0
+    },
+    {
+      "module": "家居与汽车用品",
+      "category": "成品房",
+      "le1500_rfbs": 12.0,
+      "le1500_fbp": 11.0,
+      "le5000_rfbs": 14.5,
+      "le5000_fbp": 13.5,
+      "gt5000_rfbs": 14.5,
+      "gt5000_fbp": 13.5
+    },
+    {
+      "module": "家居与汽车用品",
+      "category": "汽车、汽车房和特种设备",
+      "le1500_rfbs": 10.0,
+      "le1500_fbp": 9.0,
+      "le5000_rfbs": 10.0,
+      "le5000_fbp": 9.0,
+      "gt5000_rfbs": 10.0,
+      "gt5000_fbp": 9.0
+    },
+    {
+      "module": "美容",
+      "category": "服装和配饰",
+      "le1500_rfbs": 12.0,
+      "le1500_fbp": 11.0,
+      "le5000_rfbs": 14.0,
+      "le5000_fbp": 13.0,
+      "gt5000_rfbs": 20.5,
+      "gt5000_fbp": 19.5
+    },
+    {
+      "module": "美容",
+      "category": "鞋类",
+      "le1500_rfbs": 12.0,
+      "le1500_fbp": 11.0,
+      "le5000_rfbs": 12.0,
+      "le5000_fbp": 11.0,
+      "gt5000_rfbs": 12.0,
+      "gt5000_fbp": 11.0
+    },
+    {
+      "module": "美容",
+      "category": "美容与健康",
+      "le1500_rfbs": 12.0,
+      "le1500_fbp": 11.0,
+      "le5000_rfbs": 14.0,
+      "le5000_fbp": 13.0,
+      "gt5000_rfbs": 18.0,
+      "gt5000_fbp": 17.0
+    },
+    {
+      "module": "美容",
+      "category": "专业口腔护理",
+      "le1500_rfbs": 12.0,
+      "le1500_fbp": 11.0,
+      "le5000_rfbs": 17.0,
+      "le5000_fbp": 16.0,
+      "gt5000_rfbs": 17.0,
+      "gt5000_fbp": 16.0
+    },
+    {
+      "module": "美容",
+      "category": "外衣",
+      "le1500_rfbs": 10.0,
+      "le1500_fbp": 9.0,
+      "le5000_rfbs": 10.0,
+      "le5000_fbp": 9.0,
+      "gt5000_rfbs": 10.0,
+      "gt5000_fbp": 9.0
+    },
+    {
+      "module": "美容",
+      "category": "专业医疗设备",
+      "le1500_rfbs": 12.0,
+      "le1500_fbp": 11.0,
+      "le5000_rfbs": 17.0,
+      "le5000_fbp": 16.0,
+      "gt5000_rfbs": 17.0,
+      "gt5000_fbp": 16.0
+    },
+    {
+      "module": "其它",
+      "category": "包装袋",
+      "le1500_rfbs": 10.0,
+      "le1500_fbp": 9.0,
+      "le5000_rfbs": 10.0,
+      "le5000_fbp": 9.0,
+      "gt5000_rfbs": 10.0,
+      "gt5000_fbp": 9.0
+    },
+    {
+      "module": "儿童用品",
+      "category": "儿童纺织品",
+      "le1500_rfbs": 12.0,
+      "le1500_fbp": 11.0,
+      "le5000_rfbs": 19.0,
+      "le5000_fbp": 18.0,
+      "gt5000_rfbs": 19.0,
+      "gt5000_fbp": 18.0
+    },
+    {
+      "module": "儿童用品",
+      "category": "儿童运动用品",
+      "le1500_rfbs": 12.0,
+      "le1500_fbp": 11.0,
+      "le5000_rfbs": 14.0,
+      "le5000_fbp": 13.0,
+      "gt5000_rfbs": 14.0,
+      "gt5000_fbp": 13.0
+    },
+    {
+      "module": "儿童用品",
+      "category": "儿童电子产品、家具、配件",
+      "le1500_rfbs": 12.0,
+      "le1500_fbp": 11.0,
+      "le5000_rfbs": 14.0,
+      "le5000_fbp": 13.0,
+      "gt5000_rfbs": 20.0,
+      "gt5000_fbp": 19.0
+    },
+    {
+      "module": "儿童用品",
+      "category": "玩具",
+      "le1500_rfbs": 12.0,
+      "le1500_fbp": 11.0,
+      "le5000_rfbs": 14.0,
+      "le5000_fbp": 13.0,
+      "gt5000_rfbs": 17.5,
+      "gt5000_fbp": 16.5
+    },
+    {
+      "module": "儿童用品",
+      "category": "儿童卫生用品",
+      "le1500_rfbs": 12.0,
+      "le1500_fbp": 11.0,
+      "le5000_rfbs": 18.0,
+      "le5000_fbp": 17.0,
+      "gt5000_rfbs": 18.0,
+      "gt5000_fbp": 17.0
+    },
+    {
+      "module": "儿童用品",
+      "category": "婴儿推车和汽车安全座椅",
+      "le1500_rfbs": 12.0,
+      "le1500_fbp": 11.0,
+      "le5000_rfbs": 14.0,
+      "le5000_fbp": 13.0,
+      "gt5000_rfbs": 20.0,
+      "gt5000_fbp": 19.0
+    },
+    {
+      "module": "宠物用品",
+      "category": "宠物饲料与农场用品",
+      "le1500_rfbs": 12.0,
+      "le1500_fbp": 11.0,
+      "le5000_rfbs": 13.0,
+      "le5000_fbp": 12.0,
+      "gt5000_rfbs": 13.0,
+      "gt5000_fbp": 12.0
+    },
+    {
+      "module": "宠物用品",
+      "category": "宠物用品",
+      "le1500_rfbs": 12.0,
+      "le1500_fbp": 11.0,
+      "le5000_rfbs": 14.0,
+      "le5000_fbp": 13.0,
+      "gt5000_rfbs": 15.0,
+      "gt5000_fbp": 14.0
+    },
+    {
+      "module": "宠物用品",
+      "category": "宠物卫生与护理",
+      "le1500_rfbs": 12.0,
+      "le1500_fbp": 11.0,
+      "le5000_rfbs": 13.0,
+      "le5000_fbp": 12.0,
+      "gt5000_rfbs": 13.0,
+      "gt5000_fbp": 12.0
+    },
+    {
+      "module": "快速消费品（FMCG）",
+      "category": "食品",
+      "le1500_rfbs": 11.0,
+      "le1500_fbp": 10.0,
+      "le5000_rfbs": 11.0,
+      "le5000_fbp": 10.0,
+      "gt5000_rfbs": 11.0,
+      "gt5000_fbp": 10.0
+    },
+    {
+      "module": "快速消费品（FMCG）",
+      "category": "新鲜食品",
+      "le1500_rfbs": 11.0,
+      "le1500_fbp": 10.0,
+      "le5000_rfbs": 11.0,
+      "le5000_fbp": 10.0,
+      "gt5000_rfbs": 11.0,
+      "gt5000_fbp": 10.0
+    },
+    {
+      "module": "快速消费品（FMCG）",
+      "category": "个人卫生用品",
+      "le1500_rfbs": 12.0,
+      "le1500_fbp": 11.0,
+      "le5000_rfbs": 18.0,
+      "le5000_fbp": 17.0,
+      "gt5000_rfbs": 18.0,
+      "gt5000_fbp": 17.0
+    },
+    {
+      "module": "快速消费品（FMCG）",
+      "category": "隐形眼镜",
+      "le1500_rfbs": 12.0,
+      "le1500_fbp": 11.0,
+      "le5000_rfbs": 18.0,
+      "le5000_fbp": 17.0,
+      "gt5000_rfbs": 18.0,
+      "gt5000_fbp": 17.0
+    },
+    {
+      "module": "爱好与运动",
+      "category": "运动和休闲用品",
+      "le1500_rfbs": 12.0,
+      "le1500_fbp": 11.0,
+      "le5000_rfbs": 19.0,
+      "le5000_fbp": 18.0,
+      "gt5000_rfbs": 19.0,
+      "gt5000_fbp": 18.0
+    },
+    {
+      "module": "爱好与运动",
+      "category": "兴趣、创意与文具",
+      "le1500_rfbs": 12.0,
+      "le1500_fbp": 11.0,
+      "le5000_rfbs": 14.0,
+      "le5000_fbp": 13.0,
+      "gt5000_rfbs": 16.0,
+      "gt5000_fbp": 15.0
+    },
+    {
+      "module": "爱好与运动",
+      "category": "书籍",
+      "le1500_rfbs": 12.0,
+      "le1500_fbp": 11.0,
+      "le5000_rfbs": 22.0,
+      "le5000_fbp": 21.0,
+      "gt5000_rfbs": 22.0,
+      "gt5000_fbp": 21.0
+    },
+    {
+      "module": "爱好与运动",
+      "category": "蹦床、游泳池和立式桨板",
+      "le1500_rfbs": 12.0,
+      "le1500_fbp": 11.0,
+      "le5000_rfbs": 16.0,
+      "le5000_fbp": 15.0,
+      "gt5000_rfbs": 16.0,
+      "gt5000_fbp": 15.0
+    },
+    {
+      "module": "爱好与运动",
+      "category": "运动营养",
+      "le1500_rfbs": 12.0,
+      "le1500_fbp": 11.0,
+      "le5000_rfbs": 15.0,
+      "le5000_fbp": 14.0,
+      "gt5000_rfbs": 15.0,
+      "gt5000_fbp": 14.0
+    },
+    {
+      "module": "爱好与运动",
+      "category": "运动员营养补充剂",
+      "le1500_rfbs": 12.0,
+      "le1500_fbp": 11.0,
+      "le5000_rfbs": 18.0,
+      "le5000_fbp": 17.0,
+      "gt5000_rfbs": 18.0,
+      "gt5000_fbp": 17.0
+    },
+    {
+      "module": "电子产品",
+      "category": "电子产品配饰",
+      "le1500_rfbs": 12.0,
+      "le1500_fbp": 11.0,
+      "le5000_rfbs": 20.0,
+      "le5000_fbp": 19.0,
+      "gt5000_rfbs": 20.0,
+      "gt5000_fbp": 19.0
+    },
+    {
+      "module": "电子产品",
+      "category": "音频和视频设备配件",
+      "le1500_rfbs": 12.0,
+      "le1500_fbp": 11.0,
+      "le5000_rfbs": 14.5,
+      "le5000_fbp": 13.5,
+      "gt5000_rfbs": 14.5,
+      "gt5000_fbp": 13.5
+    },
+    {
+      "module": "电子产品",
+      "category": "家用电器",
+      "le1500_rfbs": 10.0,
+      "le1500_fbp": 9.0,
+      "le5000_rfbs": 10.0,
+      "le5000_fbp": 9.0,
+      "gt5000_rfbs": 10.0,
+      "gt5000_fbp": 9.0
+    },
+    {
+      "module": "电子产品",
+      "category": "电视机",
+      "le1500_rfbs": 9.0,
+      "le1500_fbp": 8.0,
+      "le5000_rfbs": 9.0,
+      "le5000_fbp": 8.0,
+      "gt5000_rfbs": 9.0,
+      "gt5000_fbp": 8.0
+    },
+    {
+      "module": "电子产品",
+      "category": "美容设备",
+      "le1500_rfbs": 12.0,
+      "le1500_fbp": 11.0,
+      "le5000_rfbs": 14.0,
+      "le5000_fbp": 13.0,
+      "gt5000_rfbs": 16.0,
+      "gt5000_fbp": 15.0
+    },
+    {
+      "module": "电子产品",
+      "category": "办公电脑设备、收银及仓储设备",
+      "le1500_rfbs": 12.0,
+      "le1500_fbp": 11.0,
+      "le5000_rfbs": 16.0,
+      "le5000_fbp": 15.0,
+      "gt5000_rfbs": 16.0,
+      "gt5000_fbp": 15.0
+    },
+    {
+      "module": "电子产品",
+      "category": "游戏主机及配件、摄影器材",
+      "le1500_rfbs": 12.0,
+      "le1500_fbp": 11.0,
+      "le5000_rfbs": 12.5,
+      "le5000_fbp": 11.5,
+      "gt5000_rfbs": 12.5,
+      "gt5000_fbp": 11.5
+    },
+    {
+      "module": "电子产品",
+      "category": "电脑外设设备及耗材",
+      "le1500_rfbs": 12.0,
+      "le1500_fbp": 11.0,
+      "le5000_rfbs": 14.5,
+      "le5000_fbp": 13.5,
+      "gt5000_rfbs": 14.5,
+      "gt5000_fbp": 13.5
+    },
+    {
+      "module": "电子产品",
+      "category": "非内置式大型家用电器",
+      "le1500_rfbs": 9.0,
+      "le1500_fbp": 8.0,
+      "le5000_rfbs": 9.0,
+      "le5000_fbp": 8.0,
+      "gt5000_rfbs": 9.0,
+      "gt5000_fbp": 8.0
+    },
+    {
+      "module": "电子产品",
+      "category": "智能手机和平板电脑",
+      "le1500_rfbs": 11.5,
+      "le1500_fbp": 10.5,
+      "le5000_rfbs": 11.5,
+      "le5000_fbp": 10.5,
+      "gt5000_rfbs": 11.5,
+      "gt5000_fbp": 10.5
+    },
+    {
+      "module": "电子产品",
+      "category": "电脑及笔记本配件",
+      "le1500_rfbs": 12.0,
+      "le1500_fbp": 11.0,
+      "le5000_rfbs": 12.5,
+      "le5000_fbp": 11.5,
+      "gt5000_rfbs": 12.5,
+      "gt5000_fbp": 11.5
+    },
+    {
+      "module": "电子产品",
+      "category": "Yandex 智能音箱",
+      "le1500_rfbs": 12.0,
+      "le1500_fbp": 11.0,
+      "le5000_rfbs": 14.5,
+      "le5000_fbp": 13.5,
+      "gt5000_rfbs": 14.5,
+      "gt5000_fbp": 13.5
+    },
+    {
+      "module": "电子产品",
+      "category": "嵌入式大型家用电器",
+      "le1500_rfbs": 9.0,
+      "le1500_fbp": 8.0,
+      "le5000_rfbs": 9.0,
+      "le5000_fbp": 8.0,
+      "gt5000_rfbs": 9.0,
+      "gt5000_fbp": 8.0
+    },
+    {
+      "module": "电子产品",
+      "category": "显示器",
+      "le1500_rfbs": 12.0,
+      "le1500_fbp": 11.0,
+      "le5000_rfbs": 12.5,
+      "le5000_fbp": 11.5,
+      "gt5000_rfbs": 12.5,
+      "gt5000_fbp": 11.5
+    },
+    {
+      "module": "电子产品",
+      "category": "智能手表与健身手环",
+      "le1500_rfbs": 11.5,
+      "le1500_fbp": 10.5,
+      "le5000_rfbs": 11.5,
+      "le5000_fbp": 10.5,
+      "gt5000_rfbs": 11.5,
+      "gt5000_fbp": 10.5
+    },
+    {
+      "module": "电子产品",
+      "category": "电子游戏",
+      "le1500_rfbs": 12.0,
+      "le1500_fbp": 11.0,
+      "le5000_rfbs": 14.5,
+      "le5000_fbp": 13.5,
+      "gt5000_rfbs": 14.5,
+      "gt5000_fbp": 13.5
+    },
+    {
+      "module": "电子产品",
+      "category": "台式电脑",
+      "le1500_rfbs": 9.0,
+      "le1500_fbp": 8.0,
+      "le5000_rfbs": 9.0,
+      "le5000_fbp": 8.0,
+      "gt5000_rfbs": 9.0,
+      "gt5000_fbp": 8.0
+    },
+    {
+      "module": "电子产品",
+      "category": "电脑设备配件",
+      "le1500_rfbs": 12.0,
+      "le1500_fbp": 11.0,
+      "le5000_rfbs": 13.5,
+      "le5000_fbp": 12.5,
+      "gt5000_rfbs": 13.5,
+      "gt5000_fbp": 12.5
+    },
+    {
+      "module": "电子产品",
+      "category": "笔记本电脑",
+      "le1500_rfbs": 8.0,
+      "le1500_fbp": 7.0,
+      "le5000_rfbs": 8.0,
+      "le5000_fbp": 7.0,
+      "gt5000_rfbs": 8.0,
+      "gt5000_fbp": 7.0
+    },
+    {
+      "module": "电子产品",
+      "category": "戴森配件",
+      "le1500_rfbs": 6.0,
+      "le1500_fbp": 5.0,
+      "le5000_rfbs": 6.0,
+      "le5000_fbp": 5.0,
+      "gt5000_rfbs": 6.0,
+      "gt5000_fbp": 5.0
+    },
+    {
+      "module": "电子产品",
+      "category": "索尼耳机",
+      "le1500_rfbs": 8.0,
+      "le1500_fbp": 7.0,
+      "le5000_rfbs": 8.0,
+      "le5000_fbp": 7.0,
+      "gt5000_rfbs": 8.0,
+      "gt5000_fbp": 7.0
+    },
+    {
+      "module": "电子产品",
+      "category": "三星 TWS 耳机",
+      "le1500_rfbs": 8.0,
+      "le1500_fbp": 7.0,
+      "le5000_rfbs": 8.0,
+      "le5000_fbp": 7.0,
+      "gt5000_rfbs": 8.0,
+      "gt5000_fbp": 7.0
+    },
+    {
+      "module": "电子产品",
+      "category": "三星智能手表与健身手环",
+      "le1500_rfbs": 8.0,
+      "le1500_fbp": 7.0,
+      "le5000_rfbs": 8.0,
+      "le5000_fbp": 7.0,
+      "gt5000_rfbs": 8.0,
+      "gt5000_fbp": 7.0
+    },
+    {
+      "module": "电子产品",
+      "category": "三星智能手机和平板电脑",
+      "le1500_rfbs": 8.0,
+      "le1500_fbp": 7.0,
+      "le5000_rfbs": 8.0,
+      "le5000_fbp": 7.0,
+      "gt5000_rfbs": 8.0,
+      "gt5000_fbp": 7.0
+    },
+    {
+      "module": "电子产品",
+      "category": "苹果设备",
+      "le1500_rfbs": 7.0,
+      "le1500_fbp": 6.0,
+      "le5000_rfbs": 7.0,
+      "le5000_fbp": 6.0,
+      "gt5000_rfbs": 7.0,
+      "gt5000_fbp": 6.0
+    },
+    {
+      "module": "电子产品",
+      "category": "戴森设备",
+      "le1500_rfbs": 8.0,
+      "le1500_fbp": 7.0,
+      "le5000_rfbs": 8.0,
+      "le5000_fbp": 7.0,
+      "gt5000_rfbs": 8.0,
+      "gt5000_fbp": 7.0
+    }
+  ],
+  "keyword_map": [
+    {
+      "keyword": "帐篷",
+      "category": "运动和休闲用品",
+      "note": "露营/户外"
+    },
+    {
+      "keyword": "天幕",
+      "category": "运动和休闲用品",
+      "note": "露营/户外"
+    },
+    {
+      "keyword": "睡袋",
+      "category": "运动和休闲用品",
+      "note": "露营/户外"
+    },
+    {
+      "keyword": "露营",
+      "category": "运动和休闲用品",
+      "note": "露营/户外"
+    },
+    {
+      "keyword": "户外",
+      "category": "运动和休闲用品",
+      "note": "户外用品"
+    },
+    {
+      "keyword": "登山杖",
+      "category": "运动和休闲用品",
+      "note": "运动户外"
+    },
+    {
+      "keyword": "瑜伽",
+      "category": "运动和休闲用品",
+      "note": "运动用品"
+    },
+    {
+      "keyword": "健身",
+      "category": "运动和休闲用品",
+      "note": "运动用品"
+    },
+    {
+      "keyword": "泳池",
+      "category": "蹦床、游泳池和立式桨板",
+      "note": "水上用品"
+    },
+    {
+      "keyword": "蹦床",
+      "category": "蹦床、游泳池和立式桨板",
+      "note": "户外玩具"
+    },
+    {
+      "keyword": "桨板",
+      "category": "蹦床、游泳池和立式桨板",
+      "note": "水上运动"
+    },
+    {
+      "keyword": "运动营养",
+      "category": "运动营养",
+      "note": "营养食品"
+    },
+    {
+      "keyword": "蛋白粉",
+      "category": "运动营养",
+      "note": "运动营养"
+    },
+    {
+      "keyword": "文具",
+      "category": "兴趣、创意与文具",
+      "note": "办公/文具"
+    },
+    {
+      "keyword": "画笔",
+      "category": "兴趣、创意与文具",
+      "note": "兴趣创意"
+    },
+    {
+      "keyword": "手工",
+      "category": "兴趣、创意与文具",
+      "note": "兴趣创意"
+    },
+    {
+      "keyword": "书",
+      "category": "书籍",
+      "note": "书籍"
+    },
+    {
+      "keyword": "耳机",
+      "category": "音频和视频设备配件",
+      "note": "音频配件"
+    },
+    {
+      "keyword": "音箱",
+      "category": "音频和视频设备配件",
+      "note": "音频设备"
+    },
+    {
+      "keyword": "麦克风",
+      "category": "音频和视频设备配件",
+      "note": "音频配件"
+    },
+    {
+      "keyword": "手机壳",
+      "category": "电子产品配饰",
+      "note": "手机配件"
+    },
+    {
+      "keyword": "手机膜",
+      "category": "电子产品配饰",
+      "note": "手机配件"
+    },
+    {
+      "keyword": "充电器",
+      "category": "电子产品配饰",
+      "note": "电子配件"
+    },
+    {
+      "keyword": "数据线",
+      "category": "电子产品配饰",
+      "note": "电子配件"
+    },
+    {
+      "keyword": "支架",
+      "category": "电子产品配饰",
+      "note": "电子配件"
+    },
+    {
+      "keyword": "苹果",
+      "category": "苹果设备",
+      "note": "Apple设备"
+    },
+    {
+      "keyword": "iphone",
+      "category": "苹果设备",
+      "note": "Apple设备"
+    },
+    {
+      "keyword": "ipad",
+      "category": "苹果设备",
+      "note": "Apple设备"
+    },
+    {
+      "keyword": "三星",
+      "category": "三星智能手机和平板电脑",
+      "note": "三星设备"
+    },
+    {
+      "keyword": "平板",
+      "category": "智能手机和平板电脑",
+      "note": "数码"
+    },
+    {
+      "keyword": "手机",
+      "category": "智能手机和平板电脑",
+      "note": "数码"
+    },
+    {
+      "keyword": "智能手表",
+      "category": "智能手表与健身手环",
+      "note": "穿戴设备"
+    },
+    {
+      "keyword": "手环",
+      "category": "智能手表与健身手环",
+      "note": "穿戴设备"
+    },
+    {
+      "keyword": "显示器",
+      "category": "显示器",
+      "note": "显示器"
+    },
+    {
+      "keyword": "电脑",
+      "category": "电脑设备配件",
+      "note": "电脑/配件"
+    },
+    {
+      "keyword": "笔记本",
+      "category": "笔记本电脑",
+      "note": "电脑"
+    },
+    {
+      "keyword": "键盘",
+      "category": "电脑外设设备及耗材",
+      "note": "外设"
+    },
+    {
+      "keyword": "鼠标",
+      "category": "电脑外设设备及耗材",
+      "note": "外设"
+    },
+    {
+      "keyword": "打印机",
+      "category": "办公电脑设备、收银及仓储设备",
+      "note": "办公设备"
+    },
+    {
+      "keyword": "摄像机",
+      "category": "游戏主机及配件、摄影器材",
+      "note": "摄影器材"
+    },
+    {
+      "keyword": "相机",
+      "category": "游戏主机及配件、摄影器材",
+      "note": "摄影器材"
+    },
+    {
+      "keyword": "游戏机",
+      "category": "游戏主机及配件、摄影器材",
+      "note": "游戏主机"
+    },
+    {
+      "keyword": "家电",
+      "category": "家用电器",
+      "note": "家电"
+    },
+    {
+      "keyword": "电视",
+      "category": "电视机",
+      "note": "电视"
+    },
+    {
+      "keyword": "冰箱",
+      "category": "非内置式大型家用电器",
+      "note": "大家电"
+    },
+    {
+      "keyword": "洗衣机",
+      "category": "非内置式大型家用电器",
+      "note": "大家电"
+    },
+    {
+      "keyword": "吸尘器",
+      "category": "戴森设备",
+      "note": "清洁电器"
+    },
+    {
+      "keyword": "戴森",
+      "category": "戴森设备",
+      "note": "品牌设备"
+    },
+    {
+      "keyword": "美容仪",
+      "category": "美容设备",
+      "note": "美容电器"
+    },
+    {
+      "keyword": "剃须刀",
+      "category": "美容设备",
+      "note": "美容设备"
+    },
+    {
+      "keyword": "化妆",
+      "category": "美容与健康",
+      "note": "美容"
+    },
+    {
+      "keyword": "护肤",
+      "category": "美容与健康",
+      "note": "美容"
+    },
+    {
+      "keyword": "口红",
+      "category": "美容与健康",
+      "note": "美容"
+    },
+    {
+      "keyword": "牙刷",
+      "category": "专业口腔护理",
+      "note": "口腔护理"
+    },
+    {
+      "keyword": "冲牙器",
+      "category": "专业口腔护理",
+      "note": "口腔护理"
+    },
+    {
+      "keyword": "衣服",
+      "category": "服装和配饰",
+      "note": "服饰"
+    },
+    {
+      "keyword": "连衣裙",
+      "category": "服装和配饰",
+      "note": "服饰"
+    },
+    {
+      "keyword": "T恤",
+      "category": "服装和配饰",
+      "note": "服饰"
+    },
+    {
+      "keyword": "外套",
+      "category": "外衣",
+      "note": "外衣"
+    },
+    {
+      "keyword": "羽绒服",
+      "category": "外衣",
+      "note": "外衣"
+    },
+    {
+      "keyword": "鞋",
+      "category": "鞋类",
+      "note": "鞋类"
+    },
+    {
+      "keyword": "包",
+      "category": "包装袋",
+      "note": "包袋/包装"
+    },
+    {
+      "keyword": "收纳",
+      "category": "装饰、清洁与储物",
+      "note": "家居收纳"
+    },
+    {
+      "keyword": "清洁",
+      "category": "装饰、清洁与储物",
+      "note": "家居清洁"
+    },
+    {
+      "keyword": "装饰",
+      "category": "装饰、清洁与储物",
+      "note": "家居装饰"
+    },
+    {
+      "keyword": "床品",
+      "category": "住宅和花园",
+      "note": "家居"
+    },
+    {
+      "keyword": "家具",
+      "category": "家具",
+      "note": "家具"
+    },
+    {
+      "keyword": "花园",
+      "category": "住宅和花园",
+      "note": "住宅和花园"
+    },
+    {
+      "keyword": "园艺",
+      "category": "建筑、装修和园艺设备",
+      "note": "园艺设备"
+    },
+    {
+      "keyword": "工具",
+      "category": "手动工具和测量仪器",
+      "note": "工具"
+    },
+    {
+      "keyword": "卷尺",
+      "category": "手动工具和测量仪器",
+      "note": "测量工具"
+    },
+    {
+      "keyword": "汽车",
+      "category": "汽车用品",
+      "note": "汽车用品"
+    },
+    {
+      "keyword": "车载",
+      "category": "汽车用品",
+      "note": "汽车用品"
+    },
+    {
+      "keyword": "轮胎",
+      "category": "轮胎",
+      "note": "轮胎"
+    },
+    {
+      "keyword": "建材",
+      "category": "建筑和装修",
+      "note": "建筑装修"
+    },
+    {
+      "keyword": "瓷砖",
+      "category": "装饰材料",
+      "note": "装饰材料"
+    },
+    {
+      "keyword": "卫浴",
+      "category": "卫浴设备",
+      "note": "卫浴"
+    },
+    {
+      "keyword": "水龙头",
+      "category": "卫浴设备",
+      "note": "卫浴"
+    },
+    {
+      "keyword": "滤水",
+      "category": "水过滤器",
+      "note": "水过滤器"
+    },
+    {
+      "keyword": "净水",
+      "category": "水过滤器",
+      "note": "水过滤器"
+    },
+    {
+      "keyword": "圣诞",
+      "category": "新年装饰用品",
+      "note": "节日装饰"
+    },
+    {
+      "keyword": "新年",
+      "category": "新年装饰用品",
+      "note": "节日装饰"
+    },
+    {
+      "keyword": "儿童",
+      "category": "玩具",
+      "note": "儿童用品默认"
+    },
+    {
+      "keyword": "玩具",
+      "category": "玩具",
+      "note": "玩具"
+    },
+    {
+      "keyword": "婴儿车",
+      "category": "婴儿推车和汽车安全座椅",
+      "note": "婴儿出行"
+    },
+    {
+      "keyword": "安全座椅",
+      "category": "婴儿推车和汽车安全座椅",
+      "note": "儿童出行"
+    },
+    {
+      "keyword": "尿布",
+      "category": "儿童卫生用品",
+      "note": "儿童卫生"
+    },
+    {
+      "keyword": "奶瓶",
+      "category": "儿童餐具",
+      "note": "儿童餐具"
+    },
+    {
+      "keyword": "儿童餐具",
+      "category": "儿童餐具",
+      "note": "儿童餐具"
+    },
+    {
+      "keyword": "儿童纺织",
+      "category": "儿童纺织品",
+      "note": "儿童纺织"
+    },
+    {
+      "keyword": "宠物粮",
+      "category": "宠物饲料与农场用品",
+      "note": "宠物食品"
+    },
+    {
+      "keyword": "猫粮",
+      "category": "宠物饲料与农场用品",
+      "note": "宠物食品"
+    },
+    {
+      "keyword": "狗粮",
+      "category": "宠物饲料与农场用品",
+      "note": "宠物食品"
+    },
+    {
+      "keyword": "宠物",
+      "category": "宠物用品",
+      "note": "宠物用品"
+    },
+    {
+      "keyword": "猫砂",
+      "category": "宠物卫生与护理",
+      "note": "宠物卫生"
+    },
+    {
+      "keyword": "食品",
+      "category": "食品",
+      "note": "食品"
+    },
+    {
+      "keyword": "零食",
+      "category": "食品",
+      "note": "食品"
+    },
+    {
+      "keyword": "新鲜",
+      "category": "新鲜食品",
+      "note": "新鲜食品"
+    },
+    {
+      "keyword": "卫生巾",
+      "category": "个人卫生用品",
+      "note": "个人卫生"
+    },
+    {
+      "keyword": "纸巾",
+      "category": "个人卫生用品",
+      "note": "个人卫生"
+    },
+    {
+      "keyword": "隐形眼镜",
+      "category": "隐形眼镜",
+      "note": "隐形眼镜"
+    },
+    {
+      "keyword": "药",
+      "category": "药店",
+      "note": "药品"
+    },
+    {
+      "keyword": "维生素",
+      "category": "维生素和膳食补充剂",
+      "note": "补充剂"
+    },
+    {
+      "keyword": "补充剂",
+      "category": "维生素和膳食补充剂",
+      "note": "补充剂"
+    },
+    {
+      "keyword": "电子烟",
+      "category": "电子烟及加热系统配件",
+      "note": "电子烟配件"
+    },
+    {
+      "keyword": "矫形",
+      "category": "矫形用品",
+      "note": "矫形"
+    }
+  ]
+}
