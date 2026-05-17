@@ -1,2 +1,0 @@
-已将ERP系统所有用户可见的AI名称统一替换为ChatGPT，包括页面、按钮、提示、README说明。后台仍使用OpenAI API Key调用ChatGPT能力。
-默认登录：admin / admin123
