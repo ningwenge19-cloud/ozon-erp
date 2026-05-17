@@ -9,3 +9,15 @@ textarea{width:100%;min-height:110px;margin-top:8px;border:1px solid #d1d5db;bor
 .reply-panel{background:white;border-radius:18px;padding:18px;margin-top:16px;box-shadow:0 8px 24px rgba(15,23,42,.06)}.reply-panel textarea{min-height:130px}
 
 .image-preview{background:white;border-radius:18px;padding:18px;margin:16px 0;box-shadow:0 8px 24px rgba(15,23,42,.06)}.image-preview img{max-width:360px;width:100%;border-radius:14px;display:block}
+
+.pro-cards{display:grid;grid-template-columns:repeat(4,minmax(180px,1fr));gap:16px;margin:16px 0 20px}
+.pro-card{border-radius:22px;padding:22px;color:white;box-shadow:0 14px 35px rgba(15,23,42,.14);min-height:130px}
+.pro-card span{display:block;font-size:14px;opacity:.85}.pro-card b{display:block;font-size:32px;margin:14px 0 8px}.pro-card small{opacity:.8}
+.gradient-blue{background:linear-gradient(135deg,#2563eb,#60a5fa)}.gradient-green{background:linear-gradient(135deg,#059669,#34d399)}.gradient-purple{background:linear-gradient(135deg,#7c3aed,#c084fc)}.gradient-orange{background:linear-gradient(135deg,#ea580c,#fdba74)}
+.pro-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:18px}.pro-panel{background:white;border-radius:22px;padding:18px;box-shadow:0 12px 30px rgba(15,23,42,.08)}
+.pro-panel h3{margin:0 0 12px}
+.modal{position:fixed;inset:0;background:rgba(15,23,42,.55);z-index:1000;display:flex;align-items:center;justify-content:center;padding:18px}
+.modal.hidden{display:none}.modal-card{background:white;border-radius:24px;width:min(980px,96vw);max-height:88vh;overflow:auto;box-shadow:0 30px 80px rgba(0,0,0,.35)}
+.modal-head{display:flex;justify-content:space-between;align-items:center;padding:20px 24px;border-bottom:1px solid #e5e7eb}.detail-body{padding:22px;display:grid;grid-template-columns:repeat(2,minmax(240px,1fr));gap:14px}.detail-item{background:#f8fafc;border-radius:16px;padding:14px}.detail-item span{display:block;color:#64748b;font-size:13px;margin-bottom:6px}.detail-item b{font-size:16px}
+tr.clickable{cursor:pointer}tr.clickable:hover{background:#eff6ff}
+@media(max-width:900px){.pro-cards,.pro-grid,.detail-body{grid-template-columns:1fr}.modal{align-items:flex-start}}

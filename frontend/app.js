@@ -22,6 +22,7 @@ document.querySelectorAll(".nav[data-tab]").forEach(btn=>{
   btn.onclick=()=>{
     document.querySelectorAll(".nav,.tab").forEach(x=>x.classList.remove("active"));
     btn.classList.add("active"); $(btn.dataset.tab).classList.add("active");
+    if(btn.dataset.tab==="proDashboard") loadProDashboard();
     if(btn.dataset.tab==="ops") loadOps();
     if(btn.dataset.tab==="inventory") loadInventory();
     if(btn.dataset.tab==="purchase") loadPurchases();
@@ -66,7 +67,17 @@ function setDefaultSyncDates(){let t=new Date(),p=new Date();p.setDate(t.getDate
 async function saveOzonSettings(){await fetch("/api/ozon/settings",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({client_id:$("ozon_client_id").value,api_key:$("ozon_api_key").value,warehouse_id:""})});alert("已保存Ozon API配置");}
 async function testOzon(){await saveOzonSettings();let r=await fetch("/api/ozon/test",{method:"POST"});alert(r.ok?"连接成功":"连接失败，请检查API Key");}
 async function syncOzonOrders(){let r=await fetch("/api/ozon/sync-orders",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({date_from:$("sync_from").value,date_to:$("sync_to").value,source:$("sync_source").value,limit:100})});let d=await r.json();alert(r.ok?`同步完成：${d.synced_items}条`:"同步失败："+JSON.stringify(d));loadOzonOrders();}
-async function loadOzonOrders(){let r=await fetch("/api/ozon/orders");let rows=await r.json();let h=["月份","订单号","状态","商品","SKU","数量","价格₽"];let b=rows.map(x=>`<tr><td>${x.month}</td><td>${x.posting_number}</td><td>${x.status}</td><td>${x.product_name}</td><td>${x.sku}</td><td>${x.quantity}</td><td>${x.price_rub}</td></tr>`).join("");$("ozonOrdersTable").innerHTML=`<thead><tr>${h.map(x=>`<th>${x}</th>`).join("")}</tr></thead><tbody>${b}</tbody>`}
+async function loadOzonOrders(){
+  const res = await fetch("/api/ozon/orders");
+  const rows = await res.json();
+  const head = ["月份","订单号","状态","商品名称","SKU","Offer ID","数量","售价₽","操作"];
+  const body = rows.map(r=>`<tr class="clickable" onclick="openOrderDetail('${r.posting_number||""}')">
+    <td>${r.month||""}</td><td>${r.posting_number||""}</td><td>${r.status||""}</td>
+    <td>${r.product_name||""}</td><td>${r.sku||""}</td><td>${r.offer_id||""}</td>
+    <td>${r.quantity||""}</td><td>${Number(r.price_rub||0).toFixed(2)}</td><td>查看详情</td>
+  </tr>`).join("");
+  $("ozonOrdersTable").innerHTML = `<thead><tr>${head.map(h=>`<th>${h}</th>`).join("")}</tr></thead><tbody>${body}</tbody>`;
+}
 
 async function addEmployee(){await api("/api/employees",{method:"POST",body:JSON.stringify({username:$("emp_user").value,password:$("emp_pass").value,role:$("emp_role").value,is_active:1})});loadEmployees();}
 async function loadEmployees(){let r=await api("/api/employees");let rows=await r.json();let h=["账号","角色","状态","创建时间"];let b=Array.isArray(rows)?rows.map(x=>`<tr><td>${x.username}</td><td>${x.role}</td><td>${x.is_active?"启用":"停用"}</td><td>${x.created_at}</td></tr>`).join(""):"<tr><td colspan='4'>仅管理员可查看</td></tr>";$("employeesTable").innerHTML=`<thead><tr>${h.map(x=>`<th>${x}</th>`).join("")}</tr></thead><tbody>${b}</tbody>`}
@@ -335,3 +346,50 @@ async function loadProductAssets(){
   </tr>`).join("") : `<tr><td colspan="5">${JSON.stringify(rows)}</td></tr>`;
   $("productAssetsTable").innerHTML = `<thead><tr>${h.map(x=>`<th>${x}</th>`).join("")}</tr></thead><tbody>${b}</tbody>`;
 }
+
+
+async function loadProDashboard(){
+  const r = await api("/api/pro/dashboard");
+  const d = await r.json();
+  const s = d.summary || {};
+  $("dash_orders").innerText = s.orders || 0;
+  $("dash_sales").innerText = "₽" + Number(s.sales||0).toFixed(2);
+  $("dash_profit").innerText = "¥" + Number(s.profit||0).toFixed(2);
+  $("dash_qty").innerText = s.quantity || 0;
+
+  const recent = d.recent_orders || [];
+  $("dashRecentOrders").innerHTML = `<thead><tr><th>订单号</th><th>状态</th><th>商品</th><th>SKU</th><th>金额</th></tr></thead><tbody>` +
+    recent.map(x=>`<tr class="clickable" onclick="openOrderDetail('${x.posting_number||""}')">
+      <td>${x.posting_number||""}</td><td>${x.order_status||x.status||""}</td><td>${x.product_name||""}</td><td>${x.sku||""}</td><td>₽${Number(x.sale_price||x.price_rub||0).toFixed(2)}</td>
+    </tr>`).join("") + `</tbody>`;
+
+  const top = d.top_products || [];
+  $("dashTopProducts").innerHTML = `<thead><tr><th>商品</th><th>SKU</th><th>销售额</th></tr></thead><tbody>` +
+    top.map(x=>`<tr><td>${x.product_name||""}</td><td>${x.sku||""}</td><td>₽${Number(x.sales||0).toFixed(2)}</td></tr>`).join("") + `</tbody>`;
+}
+
+async function openOrderDetail(postingNumber){
+  if(!postingNumber){ return; }
+  const r = await api("/api/pro/orders/" + encodeURIComponent(postingNumber));
+  const d = await r.json();
+  if(!r.ok){ alert(d.detail || "订单详情读取失败"); return; }
+  const o = d.order || {};
+  $("orderDetailBody").innerHTML = `
+    <div class="detail-item"><span>订单号</span><b>${o.posting_number||""}</b></div>
+    <div class="detail-item"><span>状态</span><b>${o.order_status||o.status||""}</b></div>
+    <div class="detail-item"><span>商品名称</span><b>${o.product_name||""}</b></div>
+    <div class="detail-item"><span>SKU</span><b>${o.sku||""}</b></div>
+    <div class="detail-item"><span>数量</span><b>${o.quantity||""}</b></div>
+    <div class="detail-item"><span>售价</span><b>₽${Number(o.sale_price||o.price_rub||0).toFixed(2)}</b></div>
+    <div class="detail-item"><span>物流费用</span><b>¥${Number(o.logistics_cost||0).toFixed(2)}</b></div>
+    <div class="detail-item"><span>平台佣金</span><b>¥${Number(o.commission||0).toFixed(2)}</b></div>
+    <div class="detail-item"><span>利润</span><b>¥${Number(o.profit||0).toFixed(2)}</b></div>
+    <div class="detail-item"><span>运单号</span><b>${o.tracking_number||"暂无"}</b></div>
+    <div class="detail-item"><span>客户</span><b>${o.customer_name||"暂无"}</b></div>
+    <div class="detail-item"><span>数据来源</span><b>${d.source||""}</b></div>
+  `;
+  $("orderDetailModal").classList.remove("hidden");
+}
+function closeOrderDetail(){ $("orderDetailModal").classList.add("hidden"); }
+
+setTimeout(()=>{ if($("proDashboard")?.classList.contains("active")) loadProDashboard(); }, 500);

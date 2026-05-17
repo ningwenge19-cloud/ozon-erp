@@ -21,7 +21,8 @@
   <aside>
     <h1>Ozon SaaS ERP</h1>
     <p id="userInfo">-</p>
-    <button class="nav active" data-tab="calc">利润自动计算</button>
+    <button class="nav active" data-tab="proDashboard">首页看板</button>
+    <button class="nav" data-tab="calc">利润自动计算</button>
     <button class="nav" data-tab="ops">店铺运营总表</button>
     <button class="nav" data-tab="inventory">库存系统</button>
     <button class="nav" data-tab="purchase">采购系统</button>
@@ -36,7 +37,31 @@
   </aside>
 
   <main>
-    <section id="calc" class="tab active">
+
+    <section id="proDashboard" class="tab active">
+      <div class="top">
+        <h2>Ozon ERP Pro 首页看板</h2>
+        <button onclick="loadProDashboard()">刷新数据</button>
+      </div>
+      <div class="pro-cards">
+        <div class="pro-card gradient-blue"><span>订单总数</span><b id="dash_orders">0</b><small>已同步订单</small></div>
+        <div class="pro-card gradient-green"><span>销售额</span><b id="dash_sales">₽0</b><small>Ozon订单销售额</small></div>
+        <div class="pro-card gradient-purple"><span>总利润</span><b id="dash_profit">¥0</b><small>已计算利润</small></div>
+        <div class="pro-card gradient-orange"><span>商品数量</span><b id="dash_qty">0</b><small>销售件数</small></div>
+      </div>
+      <div class="pro-grid">
+        <div class="pro-panel">
+          <h3>最新订单</h3>
+          <table id="dashRecentOrders"></table>
+        </div>
+        <div class="pro-panel">
+          <h3>热销商品</h3>
+          <table id="dashTopProducts"></table>
+        </div>
+      </div>
+    </section>
+
+    <section id="calc" class="tab">
       <div class="top"><h2>利润自动计算</h2><button id="saveBtn">保存商品</button></div>
       <div class="grid">
         <label>月份<input id="month" placeholder="2026-05"></label>
@@ -256,5 +281,15 @@
   </main>
 </div>
 <script src="./app.js"></script>
+
+<div id="orderDetailModal" class="modal hidden">
+  <div class="modal-card">
+    <div class="modal-head">
+      <h2>订单详情</h2>
+      <button onclick="closeOrderDetail()">关闭</button>
+    </div>
+    <div id="orderDetailBody" class="detail-body"></div>
+  </div>
+</div>
 </body>
 </html>
