@@ -260,7 +260,7 @@ def call_doubao(messages, temperature=0.35):
     if not s.get("api_key"):
         raise HTTPException(status_code=400, detail="未配置豆包 API Key。请先在 Railway Variables 配置 DOUBAO_API_KEY。")
 
-    url = (s.get("base_url") or "https://ark.cn-beijing.volces.com/api/v3").rstrip("/") + "/chat/completions"
+    url = (s.get("base_url") or "https://ark.cn-beijing.volces.com/api/v3").rstrip("/") + "/responses"
     headers = {
         "Authorization": "Bearer " + s["api_key"],
         "Content-Type": "application/json"
@@ -269,12 +269,15 @@ def call_doubao(messages, temperature=0.35):
     user_text = messages[-1]["content"] if messages else "你好"
   payload = {
     "model": s.get("model") or "ep-20260519003414-pf6vx",
-    "messages": [
+    "input": [
         {
             "role": "user",
-            "content": user_text
+            "content": [
+                {"type": "input_text", "text": user_text}
+            ]
         }
-    ],
+    ]
+}
     "temperature": temperature
 }
 
@@ -286,7 +289,7 @@ def call_doubao(messages, temperature=0.35):
     if data.get("output_text"):
         return data["output_text"]
     try:
-        return data["choices"][0]["message"]["content"]
+        return data["output"][0]["content"][0]["text"]
     except Exception:
         return str(data)
 
