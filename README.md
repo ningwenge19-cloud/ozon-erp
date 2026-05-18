@@ -168,3 +168,20 @@ https://你的项目.vercel.app
 部署前确认 Railway Variables：
 - DATABASE_URL
 - SUPABASE_URL
+
+## 全部 AI 已改为豆包
+
+本版本已移除对 OpenAI 的依赖，全部智能功能统一走豆包 / 火山方舟：
+- 豆包助手
+- 客服消息助手
+- 商品文案生成
+- 俄语标题/描述
+- Listing 生成
+- 采购建议
+- 商品图生成接口改为豆包图片模型配置
+
+Railway Variables 建议：
+- DOUBAO_API_KEY
+- DOUBAO_BASE_URL=https://ark.cn-beijing.volces.com/api/v3
+- DOUBAO_MODEL=doubao-seed-1-6-250615
+- DOUBAO_IMAGE_MODEL=doubao-seedream-3-0-t2i-250415
