@@ -6,7 +6,7 @@ let me = JSON.parse(localStorage.getItem("me") || "null");
 function api(path, options={}){
   options.headers = {"Content-Type":"application/json", ...(options.headers||{})};
   if(token) options.headers.Authorization = "Bearer " + token;
-  return fetch(path, options);
+  return fetch("https://web-production-dafbd.up.railway.app" + path, options);
 }
 function toast(msg){ $("toast").innerText=msg; $("toast").classList.remove("hidden"); setTimeout(()=>$("toast").classList.add("hidden"),2600); }
 function showAuth(){ $("authPage").classList.remove("hidden"); $("app").classList.add("hidden"); }
