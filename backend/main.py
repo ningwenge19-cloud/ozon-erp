@@ -1550,26 +1550,35 @@ def get_doubao_settings():
 def call_doubao(messages, temperature=0.35):
     s = get_doubao_settings()
     if not s.get("api_key"):
-        raise HTTPException(status_code=400, detail="未配置豆包 API Key。请在豆包助手页面或 Railway Variables 中配置 DOUBAO_API_KEY。")
+        raise HTTPException(status_code=400, detail="未配置豆包 API Key。请先保存豆包配置。")
+
     url = (s.get("base_url") or "https://ark.cn-beijing.volces.com/api/v3").rstrip("/") + "/responses"
-    headers = {"Authorization": "Bearer " + s["api_key"], "Content-Type": "application/json"}
-   payload = {
-    "model": s.get("model") or "ep-20260519003414-pf6vx",
-    "input": [
-        {
-            "role": "user",
-            "content": [
-                {
-                    "type": "input_text",
-                    "text": messages[-1]["content"]
-                }
-            ]
-        }
-    ]
-}
+    headers = {
+        "Authorization": "Bearer " + s["api_key"],
+        "Content-Type": "application/json"
+    }
+
+    user_text = messages[-1]["content"] if messages else "你好"
+
+    payload = {
+        "model": s.get("model") or "ep-20260519003414-pf6vx",
+        "input": [
+            {
+                "role": "user",
+                "content": [
+                    {
+                        "type": "input_text",
+                        "text": user_text
+                    }
+                ]
+            }
+        ]
+    }
+
     resp = requests.post(url, headers=headers, json=payload, timeout=120)
     if resp.status_code >= 400:
         raise HTTPException(status_code=resp.status_code, detail=resp.text)
+
     data = resp.json()
     return data["output"][0]["content"][0]["text"]
 
