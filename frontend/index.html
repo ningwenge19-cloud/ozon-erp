@@ -1,0 +1,178 @@
+
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Ozon SaaS ERP</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+<div id="authPage" class="auth-page">
+  <div class="auth-card">
+    <div class="brand-big">Ozon SaaS ERP</div>
+    <p class="muted">面向跨境卖家的订单、库存、利润和 AI 运营工作台</p>
+    <div class="auth-tabs">
+      <button class="active" onclick="switchAuth('login')">登录</button>
+      <button onclick="switchAuth('register')">注册</button>
+    </div>
+    <div id="loginBox">
+      <input id="loginAccount" placeholder="用户名或邮箱" value="admin"/>
+      <input id="loginPassword" type="password" placeholder="密码" value="admin123456"/>
+      <button class="primary full" onclick="login()">登录</button>
+      <p class="hint">默认管理员：admin / admin123456。上线后请立即修改。</p>
+    </div>
+    <div id="registerBox" class="hidden">
+      <input id="regUsername" placeholder="用户名"/>
+      <input id="regEmail" placeholder="邮箱"/>
+      <input id="regPassword" type="password" placeholder="密码，至少6位"/>
+      <button class="primary full" onclick="register()">创建账号</button>
+    </div>
+  </div>
+</div>
+
+<div id="app" class="app hidden">
+  <aside class="sidebar">
+    <div class="brand">Ozon SaaS ERP</div>
+    <div class="user" id="userInfo">-</div>
+    <nav>
+      <button class="nav active" data-tab="dashboard">首页看板</button>
+      <button class="nav" data-tab="profit">利润自动计算</button>
+      <button class="nav" data-tab="orders">Ozon出单同步</button>
+      <button class="nav" data-tab="products">库存商品</button>
+      <button class="nav" data-tab="listing">Ozon Listing</button>
+      <button class="nav" data-tab="customer">客服消息中心</button>
+      <button class="nav" data-tab="ai">豆包助手</button>
+      <button class="nav admin-only hidden" data-tab="admin">管理员后台</button>
+      <button class="nav" onclick="logout()">退出登录</button>
+    </nav>
+  </aside>
+
+  <main class="main">
+    <header class="topbar">
+      <div>
+        <h1 id="pageTitle">首页看板</h1>
+        <p id="pageSub" class="muted">欢迎回来，开始管理你的 Ozon 业务。</p>
+      </div>
+      <button class="ghost" onclick="loadAll()">刷新</button>
+    </header>
+
+    <section id="dashboard" class="page active">
+      <div class="stats">
+        <div class="stat"><span>订单数</span><b id="stOrders">0</b></div>
+        <div class="stat"><span>销售额 ₽</span><b id="stSales">0</b></div>
+        <div class="stat"><span>预计利润 ¥</span><b id="stProfit">0</b></div>
+        <div class="stat"><span>商品数</span><b id="stProducts">0</b></div>
+      </div>
+      <div class="card">
+        <h3>最近订单</h3>
+        <div class="table-wrap"><table id="recentOrders"></table></div>
+      </div>
+    </section>
+
+    <section id="profit" class="page">
+      <div class="card">
+        <h3>利润自动计算</h3>
+        <div class="grid4">
+          <input id="pfPrice" type="number" placeholder="售价 ₽"/>
+          <input id="pfCost" type="number" placeholder="采购成本 ¥"/>
+          <input id="pfShip" type="number" placeholder="物流费 ¥"/>
+          <input id="pfComm" type="number" placeholder="佣金率，例如 0.15" value="0.15"/>
+        </div>
+        <button class="primary" onclick="calcProfit()">计算利润</button>
+        <div id="profitResult" class="result">等待计算</div>
+      </div>
+    </section>
+
+    <section id="orders" class="page">
+      <div class="card">
+        <h3>Ozon 出单同步</h3>
+        <div class="grid3">
+          <input id="ozonClient" placeholder="Client-Id"/>
+          <input id="ozonKey" placeholder="API-Key"/>
+          <select id="ozonType"><option>FBS / rFBS订单</option><option>FBO订单</option></select>
+        </div>
+        <button class="primary" onclick="saveOzon()">保存 Ozon 配置</button>
+        <button onclick="syncDemoOrders()">导入演示订单</button>
+      </div>
+      <div class="card"><h3>订单列表</h3><div class="table-wrap"><table id="ordersTable"></table></div></div>
+    </section>
+
+    <section id="products" class="page">
+      <div class="card">
+        <h3>新增商品</h3>
+        <div class="grid4">
+          <input id="pdTitle" placeholder="商品名称"/>
+          <input id="pdCategory" placeholder="类目"/>
+          <input id="pdCost" type="number" placeholder="成本 ¥"/>
+          <input id="pdWeight" type="number" placeholder="重量 kg"/>
+          <input id="pdPrice" type="number" placeholder="售价 ₽"/>
+          <input id="pdStock" type="number" placeholder="库存"/>
+        </div>
+        <button class="primary" onclick="addProduct()">保存商品</button>
+      </div>
+      <div class="card"><h3>商品库</h3><div class="table-wrap"><table id="productsTable"></table></div></div>
+    </section>
+
+    <section id="listing" class="page">
+      <div class="card">
+        <h3>豆包生成 Ozon Listing</h3>
+        <div class="grid4">
+          <input id="lsName" placeholder="商品名，例如户外露营帐篷"/>
+          <input id="lsCat" placeholder="类目"/>
+          <input id="lsKeywords" placeholder="关键词/卖点"/>
+          <input id="lsPrice" type="number" placeholder="售价 ₽"/>
+        </div>
+        <button class="primary" onclick="generateListing()">生成 Listing</button>
+        <pre id="listingResult" class="ai-box">等待生成</pre>
+      </div>
+    </section>
+
+    <section id="customer" class="page">
+      <div class="card">
+        <h3>客服消息中心</h3>
+        <div class="grid2">
+          <input id="tkCustomer" placeholder="客户名称"/>
+          <input id="tkMessage" placeholder="客户消息"/>
+        </div>
+        <button class="primary" onclick="addTicket()">新增消息</button>
+      </div>
+      <div class="card"><h3>消息列表</h3><div id="ticketsList"></div></div>
+    </section>
+
+    <section id="ai" class="page">
+      <div class="card">
+        <h3>豆包 API 设置</h3>
+        <p class="muted">只有管理员可以保存全站 AI 配置。普通用户只能使用。</p>
+        <div class="grid4">
+          <input id="aiKey" placeholder="豆包 API Key，ark-..."/>
+          <input id="aiBase" placeholder="Base URL" value="https://ark.cn-beijing.volces.com/api/v3"/>
+          <input id="aiModel" placeholder="文字模型 Endpoint，ep-..."/>
+          <input id="aiImage" placeholder="图片模型"/>
+        </div>
+        <button class="primary admin-only hidden" onclick="saveAISettings()">保存 AI 配置</button>
+      </div>
+      <div class="card">
+        <h3>问 ERP 助手</h3>
+        <textarea id="aiMsg" placeholder="例如：帮我分析帐篷是否适合做Ozon"></textarea>
+        <button class="primary" onclick="askAI()">发送给豆包</button>
+        <pre id="aiAnswer" class="ai-box">等待提问</pre>
+      </div>
+    </section>
+
+    <section id="admin" class="page">
+      <div class="stats">
+        <div class="stat"><span>用户数</span><b id="adUsers">0</b></div>
+        <div class="stat"><span>全站订单</span><b id="adOrders">0</b></div>
+        <div class="stat"><span>全站商品</span><b id="adProducts">0</b></div>
+      </div>
+      <div class="card"><h3>用户管理</h3><div class="table-wrap"><table id="adminUsers"></table></div></div>
+      <div class="card"><h3>操作日志</h3><div id="auditLogs"></div></div>
+    </section>
+  </main>
+</div>
+
+<div id="toast" class="toast hidden"></div>
+<script src="app.js"></script>
+</body>
+</html>
