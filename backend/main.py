@@ -960,7 +960,7 @@ def call_doubao(messages, temperature=0.4):
         "Content-Type": "application/json"
     }
     payload = {
-        "model": settings["model"] or "gpt-4o-mini",
+        "model": settings["model"] or ep-20260518230413-wm6nv",
         "messages": messages,
         "temperature": temperature
     }
@@ -1321,7 +1321,7 @@ def list_supplier_candidates(token: Optional[str] = None):
 def call_openai_image(prompt: str, size="1024x1024", quality="medium"):
     settings = get_ai_settings()
     # Open豆包 Image API returns base64-encoded image data.
-    url = "https://api.openai.com/v1/images/generations"
+    url = "https://ark.cn-beijing.volces.com/api/v3/chat/completions"
     headers = {
         "Authorization": "Bearer " + settings["api_key"],
         "Content-Type": "application/json"
