@@ -960,7 +960,7 @@ def call_doubao(messages, temperature=0.4):
         "Content-Type": "application/json"
     }
     payload = {
-        "model": settings["model"] or ep-20260518230413-wm6nv",
+        "model": settings["model"] or "ep-20260518230413-wm6nv",
         "messages": messages,
         "temperature": temperature
     }
