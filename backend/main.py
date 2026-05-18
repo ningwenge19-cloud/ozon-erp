@@ -954,15 +954,16 @@ def get_ai_settings():
 
 def call_doubao(messages, temperature=0.4):
     settings = get_ai_settings()
-    url = "https://api.openai.com/v1/chat/completions"
+    url = "https://ark.cn-beijing.volces.com/api/v3/chat/completions"
     headers = {
         "Authorization": "Bearer " + settings["api_key"],
         "Content-Type": "application/json"
     }
     payload = {
-        "model": settings["model"] or "ep-20260518230413-wm6nv",
-        "messages": messages,
-        "temperature": temperature
+    "model": settings["model"] or "doubao-seed-1-6-250615",
+    "messages": messages,
+    "temperature": temperature
+}
     }
     try:
         resp = requests.post(url, headers=headers, json=payload, timeout=60)
