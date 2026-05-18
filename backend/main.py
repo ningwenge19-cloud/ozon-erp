@@ -1553,7 +1553,7 @@ def call_doubao(messages, temperature=0.35):
         raise HTTPException(status_code=400, detail="未配置豆包 API Key。请在豆包助手页面或 Railway Variables 中配置 DOUBAO_API_KEY。")
     url = (s.get("base_url") or "https://ark.cn-beijing.volces.com/api/v3").rstrip("/") + "/chat/completions"
     headers = {"Authorization": "Bearer " + s["api_key"], "Content-Type": "application/json"}
-    payload = {"model": s.get("model") or "ep-20260518230413-wm6nv", "messages": messages, "temperature": temperature}
+    payload = {"model": s.get("model") or "ep-20260519000704-jlf56", "messages": messages, "temperature": temperature}
     resp = requests.post(url, headers=headers, json=payload, timeout=120)
     if resp.status_code >= 400:
         raise HTTPException(status_code=resp.status_code, detail=resp.text)
